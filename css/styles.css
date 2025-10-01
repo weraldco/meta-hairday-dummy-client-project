@@ -1,0 +1,80 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: rgb(38, 38, 38);
+	color: wheat;
+	width: 100%;
+	display: grid;
+	align-content: center;
+	grid-template-rows: 1fr 4fr 1fr;
+	gap: 10px;
+	max-width: 1440px;
+	margin: 0 auto;
+	font-family: 'Inter', sans-serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+}
+div.logo {
+	font-size: 20px;
+	padding: 20px;
+	height: 80px;
+	width: 80px;
+	background-color: #7f7f7f;
+	border-radius: 100%;
+	align-content: center;
+	text-align: center;
+}
+
+header > nav {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+nav > ul {
+	list-style: none;
+	display: flex;
+	gap: 1rem;
+	font-size: 1rem;
+	align-items: center;
+}
+
+nav > ul.menus > li a {
+	/* background-color: gray; */
+	padding: 0.5rem 0.75rem;
+	border-radius: 0.5rem;
+	transition-duration: 200ms;
+}
+nav > ul.menus > li a:hover {
+	background-color: #fff;
+	color: black;
+}
+
+nav > ul > li > a {
+	text-decoration: none;
+	color: white;
+}
+
+.rates {
+	border: 2px solid rgb(84, 165, 18);
+	padding: 0.5rem 0.75rem;
+	border-radius: 0.5rem;
+}
+.book {
+	background-color: rgb(84, 165, 18);
+	padding: 0.5rem 0.75rem;
+	border-radius: 0.5rem;
+}
+
+main {
+	background-color: lightblue;
+}
+
+footer {
+	background-color: lightcoral;
+}
