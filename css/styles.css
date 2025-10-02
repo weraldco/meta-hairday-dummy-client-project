@@ -1,15 +1,16 @@
 * {
 	padding: 0;
 	margin: 0;
+	box-sizing: border-box;
+	transition: all 0.2s ease-in-out;
 }
-
 body {
 	background-color: rgb(48, 48, 48);
 	color: rgb(242, 224, 210);
 	width: 100%;
 	display: grid;
 	align-content: center;
-	grid-template-rows: 1fr 4fr 1fr;
+	grid-template-rows: auto 1fr auto;
 	gap: 10px;
 	max-width: 1440px;
 	margin: 0 auto;
@@ -55,16 +56,24 @@ nav > ul.menus > li a {
 	/* background-color: gray; */
 	padding: 0.5rem 0.75rem;
 	border-radius: 0.5rem;
-	transition-duration: 200ms;
 }
+
 nav > ul.menus > li a:hover {
 	background-color: rgb(242, 224, 210);
+	color: black;
+}
+nav > ul.menus > li a:active {
+	background-color: rgb(235, 202, 179);
+}
+a.active {
+	background-color: rgb(222, 203, 188);
 	color: black;
 }
 
 nav > ul > li > a {
 	text-decoration: none;
 	color: rgb(242, 224, 210);
+	line-height: 1.5rem;
 }
 
 .rates,
@@ -73,50 +82,238 @@ nav > ul > li > a {
 }
 
 .rates {
-	border: 2px solid rgb(84, 165, 18);
-
+	border: 2px solid rgb(208, 96, 77);
 	border-radius: 0.5rem;
 }
 .rates:hover {
-	border-color: rgb(95, 185, 21);
-	transition-duration: 200ms;
+	border-color: rgb(225, 108, 87);
 }
+
+.rates:active {
+	border-color: rgb(202, 75, 53);
+}
+
 .book {
-	background-color: rgb(84, 165, 18);
+	background-color: rgb(208, 96, 77);
 	border-radius: 0.5rem;
-	transition-duration: 200ms;
 }
 
 .book:hover {
-	background-color: rgb(101, 193, 26);
+	background-color: rgb(225, 108, 87);
+}
+.book:active {
+	background-color: rgb(202, 75, 53);
 }
 
 main {
-	background-color: lightblue;
+	display: grid;
+	grid-template-rows: 500px 200px 500px 600px 400px;
+	gap: 70px;
 }
 
+main > section {
+	display: grid;
+}
+main > section > h2 {
+	font-size: 1.25rem;
+	font-weight: 400;
+	color: rgb(208, 96, 77);
+}
+.hero-promotion > figure {
+	width: 100%;
+	position: relative;
+}
+.hero-promotion > figure > img {
+	width: 100%;
+}
+.hero-promotion > figure > figcaption {
+	position: absolute;
+	top: 60px;
+	right: 50px;
+	width: 20rem;
+	background-color: rgb(242, 224, 210);
+	padding: 2rem;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.hero-promotion > figure > figcaption > h3 {
+	font-size: 3.5rem;
+	color: rgb(208, 96, 77);
+}
+.hero-promotion > figure > figcaption > p {
+	color: rgb(59, 59, 59);
+}
+
+.hero-promotion > figure > figcaption > button {
+	width: 100%;
+	font-size: 1.5rem;
+	font-weight: 600;
+
+	background-color: rgb(48, 103, 198);
+	color: white;
+	outline: none;
+	border: none;
+	padding: 0.7rem 0;
+	border-radius: 10px;
+}
+
+.hero-promotion > figure > figcaption > button:hover {
+	background-color: rgb(65, 121, 217);
+	scale: 1.05;
+}
+.hero-promotion > figure > figcaption > button:active {
+	background-color: rgb(31, 90, 192);
+	scale: 1.05;
+}
+
+.partners > figure {
+	background-color: rgb(249, 213, 186);
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	padding: 1rem 0;
+}
+
+.partners > figure > img {
+	width: 220px;
+	height: 50px;
+	object-fit: cover;
+}
+
+.services > h2 {
+	text-align: center;
+}
+.services > div {
+	display: grid;
+	height: 100%;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 40px;
+}
+
+.services > div > article > figure {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	height: 100%;
+}
+
+.services > div > article > figure > img {
+	width: 100%;
+	height: 250px;
+	object-fit: cover;
+}
+.services > div > article > figure > figcaption {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.our-team > div {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	gap: 40px;
+}
+.our-team > div > article > figure {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.our-team > div > article > figure > img {
+	width: 100%;
+	height: 500px;
+	object-fit: cover;
+}
+
+.feedback > article {
+	display: flex;
+	background-color: rgb(222, 203, 188);
+	gap: 20px;
+	align-items: center;
+	justify-content: center;
+	height: 300px;
+	flex-wrap: wrap;
+	padding: 2rem;
+}
+.feedback > article > figure {
+	display: flex;
+	align-items: start;
+	background-color: #fff;
+	width: 350px;
+	gap: 20px;
+	padding: 1.2rem;
+	border-radius: 10px;
+}
+
+.feedback > article > figure:hover {
+	background-color: #f3f3f3;
+	scale: 1.05;
+}
+.feedback > article > figure > div {
+	height: 100%;
+}
+.feedback > article > figure > div > img {
+	border-radius: 100%;
+	height: 70px;
+	width: 70px;
+	object-fit: cover;
+	object-position: top;
+}
+
+.feedback > article > figure > figcaption > h3 {
+	font-size: 1rem;
+	color: #333;
+}
+
+.feedback > article > figure > figcaption > div {
+	display: flex;
+}
+.feedback > article > figure > figcaption > div > img {
+	height: 20px;
+}
+.feedback > article > figure > figcaption > p {
+	font-size: 0.9rem;
+	color: #333;
+}
 footer {
 	background-color: rgb(35, 35, 35);
 	display: grid;
-	grid-auto-flow: column;
-	width: 100%;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 10px;
-	padding: 0.75rem 0;
+	grid-template-columns: 2fr 1fr;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 0.75rem;
+}
+footer > div {
+	display: grid;
+	grid-template-columns: 1fr 2fr 2fr;
+	gap: 20px;
+	justify-content: space-between;
 }
 
-figure.footer-logo {
+.newsletter {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding: 0 2rem;
 }
+
 .footer-logo-img {
 	width: 100px;
 }
 
-footer > figure > figcaption {
-	font-size: 0.9rem;
-	font-weight: 300;
+footer > div > figure > figcaption > h3 {
+	font-size: 1rem;
+	font-weight: 500;
 }
 
-footer > nav {
+footer > div > figure > figcaption > p {
+	font-size: 0.8rem;
+}
+footer > div > nav {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
@@ -125,7 +322,7 @@ footer > nav > p {
 	font-size: 1rem;
 }
 
-footer > nav > ul {
+footer > div > nav > ul {
 	display: flex;
 	flex-direction: column;
 	align-items: start;
@@ -134,24 +331,19 @@ footer > nav > ul {
 	gap: 6px;
 }
 
-.newsletter {
-	width: 100%;
-	height: 100px;
-	display: grid;
-	gap: 10px;
-	grid-template-rows: 1fr 1fr;
-    justify-content: space-between;
+footer > div > nav > ul > li > a:hover {
+	color: rgb(208, 96, 77);
 }
-.newsletter > div {
-	display: flex;
-	flex-direction: row;
-    bg-
+.newsletter > span {
+	font-size: 0.9rem;
+	font-weight: 300;
 }
-
 .newsletter > input {
 	font-size: 1rem;
 	padding: 10px 5px;
 	border-radius: 6px;
+	outline: none;
+	border: 0px;
 }
 
 .newsletter > button {
@@ -162,4 +354,8 @@ footer > nav > ul {
 	border: none;
 	padding: 10px 5px;
 	border-radius: 6px;
+}
+
+.newsletter > button:hover {
+	background-color: #2378df;
 }
