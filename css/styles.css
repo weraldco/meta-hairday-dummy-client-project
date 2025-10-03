@@ -35,6 +35,10 @@ div.logo {
 }
 header {
 	padding: 0.75rem 0;
+	position: sticky;
+	top: 0;
+	background-color: rgb(48, 48, 48);
+	z-index: 50;
 }
 header > nav {
 	width: 100%;
@@ -121,16 +125,19 @@ main > section > h2 {
 }
 .hero-promotion > figure {
 	width: 100%;
+	height: 500px;
 	position: relative;
 }
 .hero-promotion > figure > img {
 	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 .hero-promotion > figure > figcaption {
 	position: absolute;
 	top: 60px;
-	right: 50px;
-	width: 20rem;
+	right: 60px;
+	width: 30%;
 	background-color: rgb(242, 224, 210);
 	padding: 2rem;
 	border-radius: 10px;
@@ -147,7 +154,6 @@ main > section > h2 {
 }
 
 .hero-promotion > figure > figcaption > button {
-	width: 100%;
 	font-size: 1.5rem;
 	font-weight: 600;
 
@@ -358,4 +364,10 @@ footer > div > nav > ul > li > a:hover {
 
 .newsletter > button:hover {
 	background-color: #2378df;
+}
+
+@media screen and (max-width: 768px) {
+	header > nav {
+		flex-direction: column;
+	}
 }
